@@ -1,0 +1,22 @@
+<div  *ngFor="let post of posts;index as i">
+<div class="container">
+    <div class="preview">
+     <div style="background-image: url('https://source.unsplash.com/random')" class="thumb"></div>
+     <div class="content">
+      <h2>{{post.title}}</h2>
+      <div>
+       <span class="tag">Author</span>
+       <span class="tag">{{post.author}}</span>
+      </div>
+      <p>{{post.description}}</p>
+      <a  style="width:10%; text-align:center; cursor: pointer;" (click)="openPostHandler(post.title,post.author,post.description,post._id)">Read Now</a>
+     </div>
+    </div>
+   </div>
+</div>
+<div>
+    <ul>
+        <li  *ngFor="let page of pages;index as i" (click)="pageHandler(i+1)">{{page}}</li>
+      
+    </ul>
+</div>

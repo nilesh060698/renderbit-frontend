@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+         <app-posts *ngIf="obj.length!== 0" [selectedData]="obj"></app-posts>
+        </div>
+        <div class="sidebar col-md-4">
+            <app-login ></app-login>
+        </div>
+    </div>
+</div>

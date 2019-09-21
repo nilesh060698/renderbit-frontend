@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngIf="access === true">
+                     <h1>Create Your Post</h1>
+                     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="form-group">
+                            <input disabled  placeholder="user name" class="form-control"  name="author" value=Author({{this.user}}) >   
+                      </div>
+                      <div class="form-group">
+                            <input   placeholder="Title of the post" class="form-control"  name="title" required ngModel>   
+                        </div>
+                        <div class="form-group">
+                                <textarea  rows="6" cols="50"   placeholder="content" class="form-control" id="content" name="content" required ngModel>   
+                                    </textarea>
+                            </div>
+                            <button class="btn btn-lg btn-primary" type="submit" style="border-radius: 30%; text-align:center;">Submit</button>
+                        </form>
+        </div>
+       
+    </div>
+</div>
+

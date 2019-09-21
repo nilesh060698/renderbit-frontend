@@ -1,0 +1,33 @@
+<div class="container" *ngIf="obj.title">
+    <div class="row">
+        <div class="col-md-12">
+                <div class="wrapper">
+  
+                        <h1>{{obj.title}}</h1>
+                        
+                        <p class="teaser">Cras massa dui, posuere id dolor nec, rutrum malesuada metus. Integer sed arcu velit.</p>
+                        
+                        
+                        <figure class="hero-figure">
+                          <img src="https://picsum.photos/1280/720" />
+                          <figcaption>Credit: Lorem Picsum</figcaption>
+                        </figure>
+                        
+                        <div class="article-meta">
+                          <img src="https://picsum.photos/200/200" alt="Author" />
+                          <div class="meta-data">
+                            <span class="meta-author">{{obj.author}}</span><br />
+                            <span class="meta-date">August 30, 2019</span>
+                          </div>
+                          <hr />
+                        </div>
+                       <p>{{obj.description}}</p>
+                        
+                        
+                      <div class="meta-bio">
+                        
+                      </div>
+        </div>
+    </div>
+</div>
+<app-comments [id] = "obj._id" ></app-comments>

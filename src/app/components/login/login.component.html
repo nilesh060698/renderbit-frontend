@@ -1,0 +1,59 @@
+
+ <div class="well">
+    <h4>Blog Search</h4>
+    <form action="search.php" method="post">
+    <div class="input-group">
+        <input  type="text" name="search" class="form-control">
+        <span class="input-group-btn">
+            <button name="submit" class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+        </button>
+        </span>
+    </div>
+        </form>
+    <!-- /.input-group -->
+</div>
+
+<div *ngIf="access !== true">
+<form (ngSubmit)="onLogIn(f)" #f="ngForm">
+ <div class="well">
+    <h4>Login </h4>
+    <div class="form-group">
+        <input   placeholder="email" class="form-control" id="email" name="email" required ngModel>   
+    </div>
+    <div class="form-group">
+            <input type="password" class="form-control" placeholder="password" id="password" name="password" required ngModel>
+    </div>  
+    <div class="input-group-btn" style="text-align: center;">
+             <button  name="submit" class="btn btn-primary" type="submit" style="border-radius: 10%;background-color: transparent;color: black;font-weight: bold;">
+               login
+            </button>
+   </div>
+   <div routerLink="/register" class="link">SignUp?</div>         
+            
+    </div>
+  </form>
+</div>
+<div *ngIf="access === true">
+        <div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+                            {{this.user}}
+					</div>
+					<div class="profile-usertitle-job">
+						Author
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-danger btn-sm " (click)="logout()">Logout</button>
+				</div>
+    
+</div>
