@@ -115,7 +115,10 @@
         width: 60% !important;
     }
    
-   @media screen and (max-width: 540px) {
+   @media screen and (max-width: 650px) {
+          .content {
+        width: 100% !important;
+    }
     .preview {
      grid-template-columns: 1fr;
      grid-template-rows: 2fr;
